@@ -19,13 +19,13 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 
-	RestTemplate restTemplate = new RestTemplate();
 
 	@GetMapping(value = "/blocking")
 	public void blockingCall() throws InterruptedException {
 		String uuid = UUID.randomUUID().toString();
-		log.info("{} making api call.", uuid);
-		restTemplate.getForEntity("http://localhost:8080/blocking", Void.class);
+		log.info("{} started.", uuid);
+		Thread.sleep(10000);
+		log.info("{} ended.", uuid);
 	}
 
 }

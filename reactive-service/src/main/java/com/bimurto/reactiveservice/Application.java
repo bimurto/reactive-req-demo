@@ -19,8 +19,6 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 
-
-
 	@GetMapping(value = "/non-blocking")
 	public Mono<String> blockingCall() throws InterruptedException {
 		String uuid = UUID.randomUUID().toString();
