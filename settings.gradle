@@ -1,0 +1,5 @@
+rootProject.name = 'reactive-req-demo'
+include 'blocking-service'
+include 'undertow-service'
+include 'reactive-service'
+
